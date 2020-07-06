@@ -13,8 +13,10 @@ function SuccessPage() {
       <MuiThemeProvider>
         <div>
           <AppBar title='Success' />
-          <h1>Thank You for your submisison</h1>
-          <p>You will get an email with further instructions shortly.</p>
+          <div style={{ margin: '20px' }}>
+            <h1>Thank You for your submisison</h1>
+            <p>You will get an email with further instructions shortly.</p>
+          </div>
         </div>
         <br />
         <RaisedButton
