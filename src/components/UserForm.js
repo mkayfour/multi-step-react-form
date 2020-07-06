@@ -7,7 +7,6 @@ import ConfirmPage from './ConfirmPage';
 import SuccessPage from './SuccessPage';
 
 export default function UserForm() {
-  //   const formData = useContext(formDataContext);
 
   const [step, setStep] = useState(1);
   const [firstName, setFirstName] = useState('');
@@ -25,6 +24,16 @@ export default function UserForm() {
     setStep(step + 1);
   };
 
+  const resetForm = () => {
+    setStep(1);
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setOccupation('');
+    setCity('');
+    setBio('');
+  };
+
   const values = {
     firstName,
     lastName,
@@ -39,7 +48,8 @@ export default function UserForm() {
     setOccupation,
     setEmail,
     nextStep,
-    prevStep
+    prevStep,
+    resetForm
   };
 
   switch (step) {
